@@ -1,6 +1,7 @@
 from pathlib import Path
 import sys
 
+
 def txt_importer(path_file):
     path = Path(path_file)
     if path.suffix != '.txt':
