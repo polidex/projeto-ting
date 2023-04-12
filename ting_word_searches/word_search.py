@@ -29,7 +29,8 @@ def search_by_word(word, instance):
         for index in range(0, len(instance.search(i)['linhas_do_arquivo'])):
             row = instance.search(i)['linhas_do_arquivo'][index]
             if word.lower() in row.lower():
-                file['ocorrencias'].append({"linha": index + 1, "conteudo": row})
+                file['ocorrencias'].append(
+                    {"linha": index + 1, "conteudo": row})
 
         print(len(file['ocorrencias']))
 
