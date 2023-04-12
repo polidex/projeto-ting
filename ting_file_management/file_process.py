@@ -10,10 +10,11 @@ def process(path_file, instance):
     result = {
         'nome_do_arquivo': path_file,
         'qtd_linhas': len(txt_importer(path_file)),
-        'linhas_do_arquivo': txt_importer(path_file)        
+        'linhas_do_arquivo': txt_importer(path_file)
     }
     instance.enqueue(result)
     sys.stdout.write(str(result))
+
 
 def remove(instance):
     if len(instance) == 0:
@@ -30,4 +31,3 @@ def file_metadata(instance, position):
         sys.stdout.write(str(value))
     except IndexError:
         sys.stderr.write('Posição inválida')
-    
